@@ -17,10 +17,6 @@ jobs:
         distribution: 'adopt'
         java-version: '11'
 
-    - name: Install Checkstyle
+    - name: Lint with Checkstyle
       run: |
-        sudo apt-get install -y checkstyle
-
-    - name: Run Checkstyle
-      run: |
-        ./mvnw checkstyle:check
+        ./gradlew checkstyleMain

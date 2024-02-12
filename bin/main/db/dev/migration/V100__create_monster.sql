@@ -1,5 +1,7 @@
 drop table if exists "monster";
 
+--this is a very special comment
+
 CREATE TABLE "monster" (
     "id" integer primary key AUTOINCREMENT,
     "name" varchar(20) not null,
