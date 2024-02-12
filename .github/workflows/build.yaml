@@ -2,7 +2,7 @@ name: Java Build
 
 on:
   pull_request:
-
+    
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,6 +16,10 @@ jobs:
       with:
         distribution: 'adopt'
         java-version: '11'
+
+    - name: Make Gradlew Executable
+      run: |
+        chmod +x gradlew
 
     - name: Build with Gradle
       run: |
