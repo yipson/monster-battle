@@ -1,7 +1,9 @@
 name: Java Build
 
 on:
-  pull_request:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -19,4 +21,8 @@ jobs:
 
     - name: Build with Maven
       run: |
-        ./mvnw clean install
+        mvn clean install
+
+    - name: Run tests
+      run: |
+        mvn test
